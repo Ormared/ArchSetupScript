@@ -1,14 +1,3 @@
-pacman -Sy
-pacman -S terminus-font
-fc-cache -fv
-setfont ter-v32b
-
-fdisk /dev/sd*
-p
-d
-
-
-w
 #!/usr/bin/env bash
 #-------------------------------------------------------------------------
 
