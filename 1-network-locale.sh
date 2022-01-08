@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-source /root/ArchSetupScript/setup.conf
 echo -ne "
 -------------------------------------------------------------------------
                     Network Setup 
@@ -7,6 +6,14 @@ echo -ne "
 "
 pacman -S networkmanager dhclient --noconfirm --needed
 systemctl enable --now NetworkManager
+
+
+echo -ne "
+=======================================================
+                NETWORK SETUP FINISHED
+=======================================================
+"
+sleep 2
 
 echo -ne "
 -------------------------------------------------------------------------
@@ -18,6 +25,13 @@ locale-gen
 timedatectl --no-ask-password set-timezone ${TIMEZONE}
 timedatectl --no-ask-password set-ntp 1
 localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="en_US.UTF-8"
+
+echo -ne "
+=======================================================
+                LOCALE FINISHED
+=======================================================
+"
+sleep 2
 
 # Set keymaps
 localectl --no-ask-password set-keymap ${KEYMAP}
