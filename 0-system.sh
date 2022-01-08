@@ -26,7 +26,7 @@ echo -ne "
                 PARTITION FINISHED
 =======================================================
 "
-sleep 2
+sleep 4
 
 # make filesystems
 echo -e "\nCreating Filesystems...\n$HR"
@@ -48,7 +48,7 @@ echo -ne "
                 FILESYSTEM CREATION FINISHED
 =======================================================
 "
-sleep 2
+sleep 4
 
 # mount target
 mount -t btrfs -o subvol=@ -L ROOT /mnt
@@ -62,4 +62,4 @@ echo -ne "
                 MOUNT FINISHED
 =======================================================
 "
-sleep 2
+sleep 4
